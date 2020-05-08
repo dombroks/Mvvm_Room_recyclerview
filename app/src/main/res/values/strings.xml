@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Mvvm_Room_recyclerview</string>
+    <string name="desc">Description</string>
+    <string name="tl">Title</string>
 </resources>
