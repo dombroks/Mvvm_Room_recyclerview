@@ -5,6 +5,8 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "Film_Table")
 public class Film {
+
+
     @PrimaryKey
     private int id ;
 
@@ -20,6 +22,10 @@ public class Film {
         return title;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -30,5 +36,9 @@ public class Film {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getId() {
+        return id;
     }
 }
