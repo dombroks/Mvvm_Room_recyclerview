@@ -1,7 +1,13 @@
 package com.dombroks.mvvm_room_recyclerview.Model;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "Film_Table")
 public class Film {
+    @PrimaryKey
     private int id ;
+
     private String title;
     private String description;
 
