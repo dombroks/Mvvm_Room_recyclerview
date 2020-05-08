@@ -46,4 +46,8 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.Holder> {
             tv_description=itemView.findViewById(R.id.tv_description);
         }
     }
+    public void setNotes(List<Film> films) {
+        this.films = films;
+        notifyDataSetChanged();
+    }
 }
