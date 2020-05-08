@@ -31,8 +31,8 @@ public class FilmRepository {
         new UpdateFilm(filmDao).execute(film);
     }
 
-    public void delete() {
-        new DeleteAll(filmDao).execute();
+    public void delete(Film film) {
+        new DeleteAll(filmDao).execute(film);
     }
 
     public void deleteAllFilms() {
