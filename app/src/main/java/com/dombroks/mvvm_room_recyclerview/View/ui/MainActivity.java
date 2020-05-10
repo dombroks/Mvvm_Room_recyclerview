@@ -1,9 +1,8 @@
-package com.dombroks.mvvm_room_recyclerview.View;
+package com.dombroks.mvvm_room_recyclerview.View.ui;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.ItemTouchHelper;
@@ -15,18 +14,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dombroks.mvvm_room_recyclerview.Adapter.FilmAdapter;
+import com.dombroks.mvvm_room_recyclerview.View.Adapter.FilmAdapter;
 import com.dombroks.mvvm_room_recyclerview.Model.Film;
 import com.dombroks.mvvm_room_recyclerview.R;
 import com.dombroks.mvvm_room_recyclerview.ViewModel.FilmViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import org.w3c.dom.Text;
-
-import java.io.File;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         final FilmAdapter adapter = new FilmAdapter();
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
@@ -77,6 +75,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, EDIT_REQUEST);
             }
         });
+        floatingActionButton = findViewById(R.id.add_film);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AddEditFilm.class);
+                startActivityForResult(intent, ADD_REQUEST);
+            }
+        });
+
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.dombroks.mvvm_room_recyclerview.View;
+package com.dombroks.mvvm_room_recyclerview.View.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.EditText;
-import android.widget.NumberPicker;
 import android.widget.Toast;
 
 import com.dombroks.mvvm_room_recyclerview.R;

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".View.AddEditFilm"
+    tools:context=".View.ui.AddEditFilm"
     android:orientation="vertical"
     android:padding="16dp">
     <EditText

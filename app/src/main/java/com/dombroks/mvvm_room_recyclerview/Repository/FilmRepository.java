@@ -7,9 +7,9 @@ import androidx.lifecycle.LiveData;
 import com.dombroks.mvvm_room_recyclerview.DB.FilmDB;
 import com.dombroks.mvvm_room_recyclerview.Dao.FilmDao;
 import com.dombroks.mvvm_room_recyclerview.Model.Film;
-import com.dombroks.mvvm_room_recyclerview.Operations.DeleteAll;
-import com.dombroks.mvvm_room_recyclerview.Operations.InsertFilm;
-import com.dombroks.mvvm_room_recyclerview.Operations.UpdateFilm;
+import com.dombroks.mvvm_room_recyclerview.Util.DeleteAll;
+import com.dombroks.mvvm_room_recyclerview.Util.InsertFilm;
+import com.dombroks.mvvm_room_recyclerview.Util.UpdateFilm;
 
 import java.util.List;
 

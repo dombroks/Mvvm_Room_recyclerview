@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.AddEditFilm"></activity>
-        <activity android:name=".View.MainActivity">
+        <activity android:name=".View.ui.AddEditFilm"></activity>
+        <activity android:name=".View.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

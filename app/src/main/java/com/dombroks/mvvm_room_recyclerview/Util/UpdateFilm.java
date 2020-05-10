@@ -1,4 +1,4 @@
-package com.dombroks.mvvm_room_recyclerview.Operations;
+package com.dombroks.mvvm_room_recyclerview.Util;
 
 import android.os.AsyncTask;
 

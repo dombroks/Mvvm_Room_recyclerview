@@ -1,4 +1,4 @@
-package com.dombroks.mvvm_room_recyclerview.Adapter;
+package com.dombroks.mvvm_room_recyclerview.View.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
