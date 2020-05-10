@@ -16,6 +16,7 @@ import java.util.List;
 
 public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.Holder> {
     private List<Film> films = new ArrayList<>();
+    private onItemClickListener listener;
 
     @NonNull
     @Override
@@ -29,6 +30,7 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.Holder> {
         Film current=films.get(position);
         holder.tv_title.setText(current.getTitle());
         holder.tv_description.setText(current.getDescription());
+
     }
 
     @Override
@@ -44,10 +46,33 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.Holder> {
             super(itemView);
             tv_title=itemView.findViewById(R.id.tv_title) ;
             tv_description=itemView.findViewById(R.id.tv_description);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+                    if (listener != null && position != RecyclerView.NO_POSITION) {
+                        listener.onItemClick(films.get(position));
+                    }
+                }
+            });
+
         }
     }
+
     public void setNotes(List<Film> films) {
         this.films = films;
         notifyDataSetChanged();
+    }
+
+    public Film getFilmAt(int position) {
+        return films.get(position);
+    }
+
+    public interface onItemClickListener {
+        void onItemClick(Film film);
+    }
+
+    public void setOnItemClickListener(onItemClickListener listener) {
+        this.listener = listener;
     }
 }
