@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 public class Film {
 
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     private int id ;
 
     private String title;

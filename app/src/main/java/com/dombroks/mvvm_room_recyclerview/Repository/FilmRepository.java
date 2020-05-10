@@ -1,6 +1,7 @@
 package com.dombroks.mvvm_room_recyclerview.Repository;
 
 import android.app.Application;
+import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 
@@ -8,6 +9,7 @@ import com.dombroks.mvvm_room_recyclerview.DB.FilmDB;
 import com.dombroks.mvvm_room_recyclerview.Dao.FilmDao;
 import com.dombroks.mvvm_room_recyclerview.Model.Film;
 import com.dombroks.mvvm_room_recyclerview.Util.DeleteAll;
+import com.dombroks.mvvm_room_recyclerview.Util.DeleteFilm;
 import com.dombroks.mvvm_room_recyclerview.Util.InsertFilm;
 import com.dombroks.mvvm_room_recyclerview.Util.UpdateFilm;
 
@@ -32,7 +34,7 @@ public class FilmRepository {
     }
 
     public void delete(Film film) {
-        new DeleteAll(filmDao).execute(film);
+        new DeleteFilm(filmDao).execute(film);
     }
 
     public void deleteAllFilms() {
@@ -40,6 +42,7 @@ public class FilmRepository {
     }
 
     public LiveData<List<Film>> getAllFilms() {
-    return allFilms;
+        return allFilms;
     }
+
 }

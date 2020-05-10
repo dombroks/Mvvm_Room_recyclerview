@@ -18,6 +18,7 @@ public class PopulateDB extends AsyncTask<Void,Void,Void> {
         filmDao.Insert(new Film("The green mile","Drama"));
         filmDao.Insert(new Film("The fast and the furious","Action"));
         filmDao.Insert(new Film("Cast away","Drama"));
+        filmDao.Insert(new Film("Cast awadsfy", "Draedfma"));
         return null;
     }
 }

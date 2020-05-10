@@ -12,7 +12,7 @@ import com.dombroks.mvvm_room_recyclerview.Dao.FilmDao;
 import com.dombroks.mvvm_room_recyclerview.Model.Film;
 import com.dombroks.mvvm_room_recyclerview.Dao.PopulateDB;
 
-@Database(entities = Film.class, version = 1)
+@Database(entities = Film.class, version = 2)
 public abstract class FilmDB extends RoomDatabase {
 
     private static FilmDB instance;

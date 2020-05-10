@@ -1,5 +1,13 @@
 package com.dombroks.mvvm_room_recyclerview.View.ui;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,30 +17,19 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.dombroks.mvvm_room_recyclerview.View.Adapter.FilmAdapter;
 import com.dombroks.mvvm_room_recyclerview.Model.Film;
 import com.dombroks.mvvm_room_recyclerview.R;
+import com.dombroks.mvvm_room_recyclerview.View.Adapter.FilmAdapter;
 import com.dombroks.mvvm_room_recyclerview.ViewModel.FilmViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    private FilmViewModel filmViewModel;
     public static final int ADD_REQUEST = 1;
     public static final int EDIT_REQUEST = 2;
+    private FilmViewModel filmViewModel;
     private FloatingActionButton floatingActionButton;
-    private TextView title;
-    private TextView description;
 
 
     @Override
@@ -63,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 filmViewModel.delete(adapter.getFilmAt(viewHolder.getAdapterPosition()));
+                Toast.makeText(MainActivity.this, "Film deleted", Toast.LENGTH_SHORT).show();
             }
         }).attachToRecyclerView(recyclerView);
         adapter.setOnItemClickListener(new FilmAdapter.onItemClickListener() {
