@@ -1,4 +1,4 @@
-# Film storing with Mvvm_Room_recyclerview.
+# Film data storing with Mvvm_Room_recyclerview.
 ### This code was built with:
 1. MVVM
 2. ROOM database
